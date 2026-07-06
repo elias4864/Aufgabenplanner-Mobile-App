@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaskListActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Meine Aufgaben"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Neuen Task hinzufügen"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingBottom="8dp"/>
+
+
+
+            <EditText
+                android:id="@+id/etTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Titel (z.B. Projekt fertigstellen)"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Beschreibung"
+                android:inputType="textMultiLine" />
+
+            <EditText
+                android:id="@+id/etPriority"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Priorität (z.B. Hoch, Mittel, Tief)"
+                android:inputType="text" />
+
+
+            <EditText
+                android:id="@+id/etid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ID"
+                android:inputType="text" />
+
+
+            <EditText
+                android:id="@+id/etDone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Erledigt"
+                android:inputType="text" />
+
+
+            <EditText
+                android:id="@+id/etDifficulty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Schwierigkeit"
+                android:inputType="text" />
+
+
+
+
+            <EditText
+                android:id="@+id/etDueDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fälligkeitsdatum (z.B. 10.07.2026)"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/btnHinzufuegen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Task hinzufügen" />
+
+            <ListView
+                android:id="@+id/listViewItems"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginTop="16dp" />
+
+            <Button
+                android:id="@+id/btnlöschen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Task löschen" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
