@@ -4,7 +4,7 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "task_item_table")
+@Entity(tableName = "task_item")
 public class TaskItem {
     @PrimaryKey(autoGenerate = true)
     public int id;

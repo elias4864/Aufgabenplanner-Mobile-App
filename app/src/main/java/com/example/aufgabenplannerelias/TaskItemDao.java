@@ -11,10 +11,10 @@ import java.util.List;
 @Dao
 public interface TaskItemDao {
 
-    @Query("SELECT * FROM task_item_table WHERE id = :id")
+    @Query("SELECT * FROM task_item WHERE id = :id")
     TaskItem getById(int id);
 
-    @Query("SELECT * FROM task_item_table ORDER BY id DESC")
+    @Query("SELECT * FROM task_item ORDER BY id DESC")
     List<TaskItem> getAll();
 
     @Insert
@@ -23,15 +23,17 @@ public interface TaskItemDao {
     @Update
     void update(TaskItem item);
 
-    @Query("DELETE FROM task_item_table")
+    @Query("DELETE FROM task_item")
     void deleteAll();
 
-    @Query("SELECT COUNT(*) FROM task_item_table")
+    @Query("SELECT COUNT(*) FROM task_item")
     int getCount();
 
     @Delete
     void delete(TaskItem item);
 
-    @Query("SELECT * FROM task_item_table ORDER BY title ASC")
+    @Query("SELECT * FROM task_item ORDER BY id ASC")
     List<TaskItem> getAllItems();
+
+
 }
