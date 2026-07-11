@@ -1,12 +1,14 @@
 
-Eine native Android-App zur effizienten und persistenten  überischtlichen Verwaltung von alltäglichen Aufgaben mit einer Taskliste  und einer Progressbar nach der Erledigung einer Task sich  prozentual und visuell erhöht.Die App bietet Funktionen zum Erstellen, Abhaken(Durhcstreichen) und Löschen von  Tasks sowie eine persistente Speicherung mittels Room-Datenbank via CRUD-Befele per DAO-Repository-Schnittstelle zugreift. Dabei drüfen maximal 7 Tasks zur Liste hinzugefügt werden können und danach der Emulator  sich  automatisch schliesst.
+Die native Android-Mobile App Master ToDo dient  zur effizienten und persistenten  überischtlichen Verwaltung von alltäglichen Aufgaben mit einer Taskliste  und einer Progressbar nach der Erledigung einer Task, die sich prozentual visuell erhöht.Die App bietet Funktionen zum Erstellen, Abhaken(Durhcstreichen) und Löschen von  Tasks sowie eine persistente Speicherung mittels Room-Datenbank via CRUD-Befele per DAO-Repository-Schnittstelle zugreift. Dabei drüfen maximal 7 Tasks zur Liste hinzugefügt werden können und danach der Emulator  sich  automatisch schliesst.
 
 
 
  ## Technische Spezifikationen & Tech-Stack
-Betriebssystem/Plattform: Android 17 mit API  37 
+Betriebssystem/Plattform: Android 17 mit API  37  mit Androi
+Framework: Jetpack-Compose auf Android-Studi basiert
 
 Getestetes Mobile-Gerät: (Empfohlen): Pixel 8 Pro Emulator
+
 
 Programmiersprache: Java (Java 17 kompatibel), mit Android API
 
