@@ -1,6 +1,18 @@
-# Aufgabenplaner Mobile-App Android App
 
-Eine native Android-App zur effizienten und persistenten  überischtlichen Verwaltung von täglichen Aufgaben in eienr Liste  Die App bietet Funktionen zum Erstellen, Abhaken und Löschen von Aufgaben sowie eine persistente Speicherung mittels Room-Datenbank via CRUD-Befele per DAO-Repository-Schnittstelle zugreift. Dabei drüfen maximal 7 Tasks zur Liste hinzugefügt werden können und danach der Emulator  sich  automatisch schliesst.
+Eine native Android-App zur effizienten und persistenten  überischtlichen Verwaltung von alltäglichen Aufgaben mit einer Taskliste  und einer Progressbar nach der Erledigung einer Task sich  prozentual und visuell erhöht.Die App bietet Funktionen zum Erstellen, Abhaken(Durhcstreichen) und Löschen von  Tasks sowie eine persistente Speicherung mittels Room-Datenbank via CRUD-Befele per DAO-Repository-Schnittstelle zugreift. Dabei drüfen maximal 7 Tasks zur Liste hinzugefügt werden können und danach der Emulator  sich  automatisch schliesst.
+
+
+
+ ## Technische Spezifikationen & Tech-Stack
+Betriebssystem/Plattform: Android 17 mit API  37 
+
+Getestetes Mobile-Gerät: (Empfohlen): Pixel 8 Pro Emulator
+
+Programmiersprache: Java (Java 17 kompatibel), mit Android API
+
+Build-Tool: Gradl(Groovy-DSL)
+
+Jetpack-Komponenten: Room Persistence Library, RecyclerView, ConstraintLayout
 
 ## 🔗 Design & UI-Screens
 Die UI-Prototypen und Screen-Entwürfe für die Aufgabenplanner APP sind auf Visily hinterlegt:
@@ -8,9 +20,9 @@ Die UI-Prototypen und Screen-Entwürfe für die Aufgabenplanner APP sind auf Vis
 
 ---
 
-## 💾 Datenbankmodell (`TaskItem` Entity)
+## 💾 Datenbankmodell (`Task` Entity)
 
-Die App nutzt eine lokale SQLite-Datenbank via Room-Dependencies die Tasks persistent in der lokalen DB  gespeichert werden  Die Entität `TaskItem` besteht aus den  folgenden Attributen:
+Die App nutzt eine lokale SQLite-Datenbank via Room-Dependencies die Tasks persistent in der lokalen DB  gespeichert werden  Die Entität `Task` besteht aus den  folgenden Attributen:
 
 
 
@@ -21,8 +33,13 @@ Die App nutzt eine lokale SQLite-Datenbank via Room-Dependencies die Tasks persi
 | `description` | `String` | Beschreibung der Aufgabe (**Pflichtfeld**). |
 | `priority` | `String` | Textfeld für die Wichtigkeit/Priorität (z. B. Standardwert "Mittel"). |
 | `dueDate` | `String` | Zeitstempel im Kalenderformat (`Jahr-Monat-Tag Stunde:Minute`), wann die Task fällig/erledigt ist. |
-| `done` | `Boolean` | Erledigt-Status (`true`/`false`). Steuert die Checkbox und die durchgestrichene UI-Darstellung. |
+| `done` | `Boolean` | Erledigt-Status (`true`/`false`). Steuert die Checkbox und die durchgestrichene UI-Darstellung. 
+| 'progress' | 'int' | Anzahl erledigten Tasks von gesamten Anzahl Tasks. Mit eienr ProgressBalken wird in Prozentualer ANzahl mit einem grünem Balken sich gefüllt nachdem die Task abgehakt wurde
 | `difficulty` | `Enum` | Schwierigkeitsgrad der Task. Mögliche Werte: `LEICHT`, `MITTEL`, `SCHWER` (**Pflichtfeld**). |
+
+ 
+
+
 
 ---
 
